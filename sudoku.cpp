@@ -15,10 +15,3 @@ sudoku::~sudoku()
 
 }
 
-
-/*
- * Au lieu de dire grille 9 * 9 cases -> groupe de 3*3 cases
- *
- * dire 3*3 -> 3*3 groupes de 3*3 cases !
- *
- * /

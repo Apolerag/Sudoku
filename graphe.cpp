@@ -5,7 +5,7 @@ Graphe::Graphe()
 
 }
 
-Graphe::Graphe(const int l):Grille(size)
+Graphe::Graphe(const int l):Grille(l*l)
 {
 
 }
