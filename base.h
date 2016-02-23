@@ -2,20 +2,16 @@
 #define BASE_H
 
 #include<iostream>
-#include <vector>
-#include <set>
-
+#include <QVector>
+#include <QSet>
+#include <boost/logic/tribool.hpp>
 
 typedef enum{
     noError = 0,
     Vide = 1,
     Nochange = 1
-} Error;
+} error;
 
-typedef enum {
-    vide,
-    test,
-    valide
-} Etat;
+
 
 #endif // BASE_H

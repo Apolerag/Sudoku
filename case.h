@@ -9,35 +9,34 @@ public:
     Case();
     ~Case();
 
-    Error addVoisin(Case& c);
-    Error changeEtat(Etat& newEtat);
+    error addVoisin(Case& c);
+    error changeEtat(bool& newEtat);
 
     void write();
 
     //Getter/Setter
-    std::vector<Case> voisins() const;
-    void setVoisins(const std::vector<Case>& voisins);
+    QVector<Case> voisins() const;
+    void setVoisins(const QVector<Case>& voisins);
 
-    unsigned int value() const;
-    void setValue(unsigned int value);
+    unsigned value() const;
+    void setValue(unsigned value);
 
-    std::set<unsigned int> possibleValue() const;
-    void setPossibleValue(const std::set<unsigned int>& possibleValue);
-    void addPossibleValue(const unsigned int val);
-    void removePossibleValue(const unsigned int val);
+    QSet<unsigned> possibleValue() const;
+    void setPossibleValue(const QSet<unsigned>& possibleValue);
+    void addPossibleValue(const unsigned val);
+    void removePossibleValue(const unsigned val);
 
     unsigned int nbPossible() const;
-    void setNbPossible(unsigned int nbPossible);
 
-    Etat etat() const;
-    void setEtat(const Etat &etat);
+    bool etat() const;
+    void setEtat(const bool &etat);
 
 private:
-    std::vector<Case> _voisins;
+    QVector<Case> _voisins;
     unsigned int _value;
-    std::set<unsigned int> _possibleValue;
-    unsigned int _nbPossible;
-    Etat _etat;
+    QSet<unsigned> _possibleValue;
+    QSet<unsigned> _testedValue;
+    bool _etat;
 };
 
 #endif // CASE_H

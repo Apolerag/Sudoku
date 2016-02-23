@@ -4,16 +4,20 @@
 #include<base.h>
 #include<graphe.h>
 
-class sudoku
+class Sudoku
 {
 public:
-    sudoku();
-    sudoku(const int, const int);
-    ~sudoku();
+    Sudoku();
+    Sudoku(const int, const int);
+    ~Sudoku();
+
+    size_t& operator() (size_t row, size_t col);
+    size_t  operator() (size_t row, size_t col) const;
 
 private:
-    int colonne, ligne;
-    Graphe grille;
+    Graphe _grille;
+    int _colonne;
+    int _ligne;
 };
 
 #endif // SUDOKU_H
